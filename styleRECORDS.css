@@ -1,0 +1,420 @@
+/* Main Style for all file
+/* Must keep */
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root {
+    --brown: #261700;
+    --pink: #efe0bb;
+    --grey: #dddddd
+    --black : #28282B;
+    --white: #F9F6EE;
+    --bggreen: #90EE90;
+    --btnRed: #FFCCCB;
+    --btnGreen: #90EE90;
+    --lightergrey: #cccccc;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+}
+html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Content Styling */
+/* Content Wrapper */
+.content-wrapper {
+    width: 100%;
+    min-width: 1300px;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+/* Nav Wrapper */
+.nav-wrapper {
+    overflow: hidden;
+    z-index: 10;
+    background-color: var(--brown);
+    display: flex;
+    flex-direction: column;
+    padding: 0rem;
+    gap: 3rem;
+    width: 0px;
+    transition: 0.1s ease-in-out;
+    position: relative;
+}
+.nav-wrapper * {
+    color: var(--white);
+}
+.icon-wrapper {
+    font-size: clamp(0.8rem, 0.5143rem + 0.9143vw, 1.2rem);
+    font-weight: 900;
+
+}
+.nav-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.nav-items > div {
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+}
+/* Active Div */
+.active-btn {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: var(--white);
+    border-radius: 5px;
+}
+/* Div Hover */
+.nav-items > div:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* Body Wrapper */
+.main-content {
+    background-color: var(--white);
+    width: 100%;
+    overflow: hidden auto;
+    display: flex;
+    flex-direction: column;
+}
+.main-content > *:not(.record-heading) {
+    padding: 1rem 1%;
+}
+
+/* Main Content */
+.record-heading {
+    background-color: var(--brown);
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 1rem 1rem;
+}
+.internal-heading, .internal-heading * {
+    font-size: 1.3rem;
+    color: var(--white);
+}
+.record-filter {
+    position: absolute;
+    top: 110%;
+    left: 1rem;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    background-color: var(--white);
+    //color: var(--white);
+    z-index: 99;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.record-filter > button {
+    font-size: 1rem;
+    padding: 1rem 0;
+    background-color: var(--white);
+    border: none;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    color: var(--black);
+}
+.record-filter > button:hover {
+    color: var(--black);
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+}
+.search-filter input, .search-filter select {
+    padding: 0 0.5rem;
+    font-size: 1rem;
+}
+.record-view {
+    display: flex;
+    flex-direction: column;
+}
+.view-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0 0 0 1rem;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+}
+.close-nav {
+    position: absolute;
+    top: 1rem;
+    right: 2%;
+    font-size: 1.5rem;
+}
+.filter-cont {
+    display: flex;
+    margin: 1rem 0;
+}
+
+/* Table */
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--white);
+}
+th, td {
+    padding: 0.5rem;
+}
+th {
+    background-color: gainsboro;
+    color: var(--black);
+    text-align: left;
+}
+tr {
+    font-size: 0.8rem;
+}
+table, th, td {
+    border: 0;
+    border-collapse: collapse;
+}
+tr:nth-child(odd) {
+    background-color: #e8e8e8;
+}
+tr:hover {
+    background-color: gainsboro;
+}
+.action-btn {
+    display: flex;
+    justify-content: space-evenly;
+}
+.action-btn > button {
+    border: unset;
+    width: 2rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    font-weight: 600;
+    cursor: pointer;
+    height: 100%;
+}
+.no-record {
+    text-align: center;
+}
+
+/* Add new btn */
+.add-btn {
+    position: fixed;
+    z-index: 10;
+    top: 9.5rem;
+    right: 2%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--lightergrey);
+    transition: 0.4s ease-in-out;
+}
+.add-btn * {
+    color: var(--black);
+}
+
+/* Popup View */
+.view-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.view-card {
+    background-color: var(--white);
+    max-height: 90vh;
+    overflow-y: scroll;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    width: min(100%, 900px);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.view-heading{
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.inner-view-heading1, .inner-view-content1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+.inner-view-heading2, .inner-view-content2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+.inner-view-heading1, .inner-view-heading2 {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.inner-view-content1, .inner-view-content2 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+.inner-view-content1 > span, .inner-view-content2 > span {
+    text-wrap: wrap;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--black);
+}
+.closeme {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 3rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: unset;
+    cursor: pointer;
+    background-color: red;
+    transition: 0.4s ease-in-out;
+}
+.closeme > i {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+.closeme:hover {
+    box-shadow: 0 0 10px var(--grey);
+    scale: 1.1;
+}
+
+/* Pagination Styling */
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 1rem;
+}
+.pagination > a {
+    display: block;
+    font-size: 0.8rem;
+    width: 1.5rem;
+    aspect-ratio: 1/1;
+    background-color: gainsboro;
+    text-align: center;
+    text-decoration: none;
+    color: blue;
+}
+.pagination > a.active {
+    background-color: var(--brown);
+    color: var(--white);
+}
+
+/* For Hidden Forms */
+.for-search {
+    display: none;
+}
+
+.poparea {
+    display: flex;
+    justify-content: flex-end;
+}
+.popupbtn {
+    width: auto;
+    padding: 0.25rem 1.5rem;
+    border: none;
+    background-color: rgba(0, 0, 255, 0.2);
+    color: blue;
+    cursor: pointer;
+}
+
+/* popup form */
+#logoutForm
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.popupFormLogout {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--black);
+    padding: 1rem;
+    width: min(80%, 500px);
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+}
+h3{
+    columns: var(--black);
+}
+.header-cont{
+    display: flex; 
+    flex-direction: row
+}
+.icon-box{
+    display:flex; 
+    margin-right:0.5rem;
+    margin: 1rem 1rem 0 1rem;
+}
+
+.headertext-logout {
+    padding-bottom: 1rem;
+}
+
+.headertext-logout>small {
+    font-weight: 100;
+    text-align: center;
+}
+.form-btnarea{
+    display: flex;
+    justify-content: flex-end;
+}
+.buttonno{
+    background-color: var(--grey);
+    width: 5rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+.buttonyes{
+    background-color: #90EE90;
+    color: green;
+    width: 5rem;;
+    border: none;
+    padding: 0.5 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}

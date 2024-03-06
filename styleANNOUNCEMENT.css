@@ -1,0 +1,353 @@
+/* Main Style for all file
+/* Must keep */
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root {
+    --brown: #261700;
+    --pink: #efe0bb;
+    --grey: #dddddd
+    --black : #28282B;
+    --white: #F9F6EE;
+    --bggreen: #90EE90;
+    --btnRed: #FFCCCB;
+    --btnGreen: #90EE90;
+    --lightergrey: #cccccc;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+}
+html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Content Styling */
+/* Content Wrapper */
+.content-wrapper {
+    width: 100%;
+    min-width: 1300px;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+/* Nav Wrapper */
+.nav-wrapper {
+    overflow: hidden;
+    z-index: 10;
+    background-color: var(--brown);
+    display: flex;
+    flex-direction: column;
+    padding: 0rem;
+    gap: 3rem;
+    width: 0px;
+    transition: 0.1s ease-in-out;
+    position: relative;
+}
+.nav-wrapper * {
+    color: var(--white);
+}
+.icon-wrapper {
+    font-size: clamp(0.8rem, 0.5143rem + 0.9143vw, 1.2rem);
+    font-weight: 900;
+
+}
+.nav-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.nav-items > div {
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+}
+/* Active Div */
+.active-btn {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: var(--white);
+    border-radius: 5px;
+}
+/* Div Hover */
+.nav-items > div:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.close-nav {
+    position: absolute;
+    top: 1rem;
+    right: 2%;
+    font-size: 1.5rem;
+}
+/* popup form */
+#logoutForm
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.popupFormLogout {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--black);
+    padding: 1rem;
+    width: min(80%, 500px);
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+}
+h3{
+    columns: var(--black);
+}
+.header-cont{
+    display: flex; 
+    flex-direction: row
+}
+.icon-box{
+    display:flex; 
+    margin-right:0.5rem;
+    margin: 1rem 1rem 0 1rem;
+}
+
+.headertext-logout {
+    padding-bottom: 1rem;
+}
+
+.headertext-logout>small {
+    font-weight: 100;
+    text-align: center;
+}
+.form-btnarea{
+    display: flex;
+    justify-content: flex-end;
+}
+.buttonno{
+    background-color: var(--grey);
+    width: 5rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+.buttonyes{
+    background-color: #90EE90;
+    color: green;
+    width: 5rem;;
+    border: none;
+    padding: 0.5 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Body Wrapper */
+.main-content {
+    background-color: var(--white);
+    width: 100%;
+    overflow: hidden auto;
+    display: flex;
+    flex-direction: column;
+}
+.main-content > *:not(.record-heading) {
+    padding: 1rem 1%;
+}
+
+/* Main Content */
+.record-heading {
+    background-color: var(--brown);
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 1rem 1rem;
+}
+.internal-heading, .internal-heading * {
+    font-size: 1.3rem;
+    color: var(--white);
+}
+.floating-btn {
+    position: fixed;
+    z-index: 10;
+    top: 5rem;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--lightergrey);
+    transition: 0.4s ease-in-out;
+}
+.floating-btn, .floating-btn i {
+    transition: 0.3s ease-in;
+    font-weight: 600;
+}
+.floating-btn:hover {
+    text-decoration: underline;
+}
+.post-card {
+    margin: 0 12% 2rem;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    margin-bottom: 2rem;
+}
+img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-image: var(--grey);
+    border-radius: 10px;
+}
+.para {
+    text-align: justify;
+    padding: 0.5rem;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.desc-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.title-box {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--black);
+    margin-bottom: 2rem;
+}
+.option-wrapper > form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2rem;
+}
+.option-wrapper > form > button {
+    width: 80%;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+.option-wrapper > form > button:nth-child(2) {
+    background-color: var(--bggreen);
+}
+.option-wrapper > form > button:nth-child(3) {
+    background-color: var(--pink);
+}
+.option-wrapper > form > button:hover {
+    text-decoration: underline;
+}
+.empty-post {
+    width: 30%;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 10px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 900;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.empty-post > span {
+    font-size: 1.2rem;
+    text-align: center;
+}
+.empty-post > i {
+    font-size: 4rem;
+    color: red;
+}
+
+/* popup cancel style */
+.popupCover{
+    z-index: 900;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+.popupForm {
+	width: min(90%, 600px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px var(--black);
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--white);
+    padding: 2rem;
+}
+.headertext-box{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+.form-btnarea{
+    display: flex;
+    justify-content: flex-end
+}
+.icon-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 1rem;
+}
+.buttonno{
+    background-color: var(--grey);
+    width: 5rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+.buttonyes{
+    background-color: #90EE90;
+    color: green;
+    width: 5rem;;
+    border: none;
+    padding: 0 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}

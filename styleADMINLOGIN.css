@@ -1,0 +1,93 @@
+/* Main Style for all file
+/* Must keep */
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root {
+    --brown: #261700;
+    /*--pink: #F7E4D7; */
+    --pink: #efe0bb;
+    --grey: #dddddd
+    --black : #28282B;
+    --white: #F9F6EE;
+    --bggreen: #90EE90;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+}
+html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: url('Photos/Background-Registration.jpg') center/cover no-repeat;
+    min-height: 100vh;
+}
+.login-card{
+    width: min(90%, 400px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    box-shadow: 0 0 20px var(--grey);
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: white;
+    height:auto;
+}
+.icon-cont {
+    width: 7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+    padding: 0.3rem 4rem
+}
+.button-cont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 4rem;
+}
+button{
+    width: 100%;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 0;
+    color: var(--white);
+    font-weight: 600;
+}
+input{
+    width: 100%;
+}
+.form-input {
+    position: relative;
+}
+.form-input input {
+    padding: 0.5rem 0.25rem;
+    border: 1px solid var(--black);
+    background: var(--white);
+}
+#icon {
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+}
