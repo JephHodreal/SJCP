@@ -1,6 +1,7 @@
 <?php
 session_start();
 require 'dbconnect.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -26,11 +27,11 @@ require 'dbconnect.php';
                 <i class="fa-solid fa-church"></i> SJCP
             </div>
             <div class="nav-items">
-                <div><i class="fa-solid fa-chart-line"></i>&nbspDashboard </div>
-                <div><i class="fa-solid fa-newspaper"></i>&nbspAnnouncements </div>
-                <div class="active-btn"><i class="fa-solid fa-file-pen"></i>&nbspRecords </div>
-                <div><i class="fa-solid fa-calendar-check"></i>&nbspAppointments </div>
-                <div><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbspLog-out </div>
+                <div><i class="fa-solid fa-chart-line"></i>&nbspDashboard</div>
+                <div><i class="fa-solid fa-newspaper"></i>&nbspAnnouncements</div>
+                <div class="active-btn"><i class="fa-solid fa-file-pen"></i>&nbspRecords</div>
+                <div><i class="fa-solid fa-calendar-check"></i>&nbspAppointments</div>
+                <div><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbspLog-out</div>
             </div>
         </div>
 
@@ -38,7 +39,7 @@ require 'dbconnect.php';
         <div class="main-content">
             <div class="record-heading">
                 <div class="internal-heading" onclick="openNav()" id="openNav"><i class="fa-solid fa-bars"></i></div>
-                <div class="internal-heading"><span id="sjcp"><i class="fa-solid fa-church"></i>&nbspSJCP </span> Announcements</div>
+                <div class="internal-heading"><span id="sjcp"><i class="fa-solid fa-church"></i>&nbspSJCP</span> Announcements</div>
             </div>
             <div class="form-wrapper">
                 <div class="form-card">
@@ -52,8 +53,8 @@ require 'dbconnect.php';
                                     <i class="fa-solid fa-circle-exclamation"></i>
                                 </div>
                                 <div class="headertext-box">
-                                    <h3>Are you sure you want to discard changes?</h3>
-                                    <p>Discarding will not post the current announcment you are making and will not save any changes.</p>
+                                    <h3>Discard changes?</h3>
+                                    <p>Discarding will not post the current announcment you are making and will not save any changes</p>
                                 </div>
                             </div>
                             <div class="form-btnarea">
@@ -94,7 +95,7 @@ require 'dbconnect.php';
                                         <i class="fa-solid fa-circle-exclamation"></i>
                                     </div>
                                     <div class="headertext-box">
-                                        <h3>Are you sure you want to post the announcement?</h3>
+                                        <h3>Post Announcement?</h3>
                                         <p>Clients of SJCP will be able to view posted announcements in their feed.</p>
                                     </div>
                                 </div>
@@ -113,8 +114,8 @@ require 'dbconnect.php';
                                         <i class="fas fa-check-circle"></i>
                                     </div>
                                     <div class="headertext-box">
-                                        <h3>Announcement has been posted</h3>
-                                        <p>You may edit or delete the announcement in the Announcements page.</p>
+                                        <h3>Post has been Added</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                     </div>
                                 </div>
                                 <div class="form-btnarea">

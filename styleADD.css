@@ -4,10 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root {
     --brown: #261700;
-    --pink: #efe0bb;
-    --grey: #dddddd
+    --pink: #F7E4D7; 
     --black : #28282B;
     --white: #F9F6EE;
+    --grey: #696969;
     --btnRed: #FFCCCB;
     --btnGreen: #90EE90;
     --lightergrey: #cccccc;
