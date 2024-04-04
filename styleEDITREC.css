@@ -4,10 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root {
     --brown: #261700;
-    --pink: #efe0bb;
-    --grey: #dddddd
+    --pink: #F7E4D7; 
     --black : #28282B;
     --white: #F9F6EE;
+    --grey: #696969;
     --bggreen: #90EE90;
     --btnRed: #FFCCCB;
     --btnGreen: #90EE90;
@@ -103,6 +103,43 @@ input, select {
 .main-content button:hover {
     scale: 1.02;
 }
+.button-area {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.form-btnarea {
+    width: 80%;
+}
+
+.button-area,
+.form-btnarea {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-area button,
+.form-btnarea button {
+    width: 5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 0 10px grey;
+    font-weight: 600;
+}
+
+.button-area button:first-child,
+.form-btnarea button:first-child {
+    background-color: var(--btnRed);
+    color: red;
+}
+
+.button-area button:nth-child(2),
+.form-btnarea button:nth-child(2) {
+    background-color: var(--btnGreen);
+    color: green;
+}
 .backbtn {
     position: fixed;
     color: var(--white);
@@ -119,6 +156,62 @@ input, select {
     color: var(--white);
     font-weight: 900;
 }
-.button-area {
-    
+.opt-area {
+    width: 50%;
+    padding-inline: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+}
+.opt-area button {
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: inherit;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.opt-area button:hover {
+    background-color: var(--bggreen);
+}
+
+/* popup form */
+#deleteForm,
+#clearForm,
+#submitForm {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popupForm {
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 0 10px var(--black);
+    padding: 1rem;
+    width: min(80%, 350px);
+    text-align: center;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.headertext-box {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.headertext-box>small {
+    font-weight: 100;
+    text-align: center;
 }

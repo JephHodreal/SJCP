@@ -108,7 +108,7 @@ require 'dbconnect.php';
 									<input type="tel" name="ContNum" id="" value="<?php echo trim($row['contactNum'], "+63") ?>" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" maxlength="10" pattern="[9]{1}[0-9]{9}" required>
 								</div>
 								<select name="MarType" id="" required>
-									<option value="<?php echo $row['marriage-type'] ?>" selected hidden><?php echo $row['marriage-type'] ?></option>
+									<option value="<?php echo $row['marriage_type'] ?>" selected hidden><?php echo $row['marriage_type'] ?></option>
 									<option value="Civil Marriage">Civil Marriage</option>
 									<option value="Church Marriage">Church Marriage</option>
 								</select>
@@ -487,6 +487,7 @@ require 'dbconnect.php';
 			?>
 		</div>
 	</div>
+	<script src="jsRECORDS.js"></script>
 </body>
 
 </html>
