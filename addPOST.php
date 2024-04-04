@@ -11,7 +11,7 @@ if (isset($_POST['submitReg'])) {
     $dir = "Photos/";
 
     if (empty($_FILES['image']['name'])) {
-        $query = 'INSERT INTO announcement_details VALUES (0,"default.jpg","$title","$date","time(NOW())","$desc")';
+        $query = "INSERT INTO announcement_details VALUES (0,'default.jpg','$title','$date','time(NOW())','$desc')";
         $res = mysqli_query($conn, $query);
         $_SESSION['inserted'] = true;
         header('Location: add_ANNOUNCEMENT.php');
@@ -25,7 +25,7 @@ if (isset($_POST['submitReg'])) {
             header('Location: add_ANNOUNCEMENT.php');
         } else {
             move_uploaded_file($_FILES["image"]["tmp_name"], $targetFilePath);
-            $query = 'INSERT INTO announcement_details VALUES (0,"$fileName","$title","$date","time(NOW())","$desc")';
+            $query = "INSERT INTO announcement_details VALUES (0,'$fileName','$title','$date','time(NOW())','$desc')";
             $res = mysqli_query($conn, $query);
             $_SESSION['inserted'] = true;
             header('Location: add_ANNOUNCEMENT.php');
